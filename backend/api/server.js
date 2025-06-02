@@ -20,7 +20,7 @@ app.use("/chargers", chargerRoutes);
 app.use("/bookings", bookingRoutes);
 
 app.get("/", (req, res) => {
-  res.send("Hello from root!");
+  res.send("Hello!");
 });
 
 module.exports = app;
