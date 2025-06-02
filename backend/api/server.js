@@ -21,9 +21,9 @@ app.use(express.json());
 
 connectDB();
 
-app.use("/users", userRoutes);
-app.use("/chargers", chargerRoutes);
-app.use("/bookings", bookingRoutes);
+app.use("/api/users", userRoutes);
+app.use("/api/chargers", chargerRoutes);
+app.use("/api/bookings", bookingRoutes);
 
 app.get("/", (req, res) => {
   res.send("Hello!");
