@@ -3,7 +3,7 @@ const cors = require("cors");
 const serverless = require("serverless-http");
 require("dotenv").config();
 
-const { connectDB } = require("../config");
+const { connectDB } = require("../config/config");
 const userRoutes = require("../routes/userRoutes");
 const chargerRoutes = require("../routes/chargerRoutes");
 const bookingRoutes = require("../routes/bookingRoutes");
