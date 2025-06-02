@@ -4,10 +4,9 @@ import Login from "./pages/Login";
 import Register from "./pages/Register";
 import Navbar from "./components/Navbar";
 import Station from "./pages/Stations";
-import StationManager from "./pages/stationManager";
+import StationManager from "./pages/StationManager";
 import Bookings from "./pages/Bookings";
 
-// 🟨 Import ToastContainer and CSS
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
@@ -24,7 +23,6 @@ function App() {
         <Route path="/myBookings" element={<Bookings />} />
       </Routes>
 
-      {/* 🟩 Toast notifications will show here */}
       <ToastContainer
         position="top-right"
         autoClose={3000}
