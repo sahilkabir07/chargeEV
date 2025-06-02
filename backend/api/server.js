@@ -13,13 +13,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-connectDB(); // ensure this does NOT call app.listen()
+connectDB();
 
 app.use("/api/users", userRoutes);
 app.use("/api/chargers", chargerRoutes);
 app.use("/api/bookings", bookingRoutes);
 
-app.get("/", (req, res) => {
+app.get("/api", (req, res) => {
   res.send("Hello!");
 });
 
