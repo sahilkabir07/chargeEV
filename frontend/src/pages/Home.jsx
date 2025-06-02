@@ -3,7 +3,6 @@ import React from 'react';
 const Home = () => {
     return (
         <div className="bg-white text-gray-800">
-            {/* Hero Section */}
             <section className="bg-gradient-to-r from-green-700 to-green-900 text-white py-20">
                 <div className="container mx-auto px-6 text-center">
                     <h1 className="text-4xl md:text-5xl font-bold mb-4 leading-tight">
@@ -18,7 +17,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Platform Features */}
             <section className="py-20">
                 <div className="container mx-auto px-6">
                     <h2 className="text-3xl font-bold text-center mb-12 text-green-700">
@@ -60,7 +58,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* About Section */}
             <section className="bg-gray-50 py-20">
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold mb-4 text-green-800">About Evoltsoft</h2>
@@ -72,7 +69,6 @@ const Home = () => {
                 </div>
             </section>
 
-            {/* Clients / Trusted Section */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-6 text-center">
                     <h2 className="text-3xl font-bold mb-6 text-green-800">Trusted by Industry Leaders</h2>

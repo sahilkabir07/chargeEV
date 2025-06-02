@@ -4,6 +4,7 @@ import axios from "axios";
 import { UserContext } from "../context/UserContext";
 
 function Register() {
+    const BASE_URL = import.meta.env.VITE_BASE_URL;
     const [username, setUsername] = useState("");
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
@@ -18,7 +19,7 @@ function Register() {
         setError("");
 
         try {
-            const { data } = await axios.post("http://localhost:5000/api/users/register", {
+            const { data } = await axios.post(`${BASE_URL}api/users/register`, {
                 username,
                 email,
                 password,

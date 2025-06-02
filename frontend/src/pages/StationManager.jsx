@@ -2,6 +2,7 @@ import { useState } from "react";
 import axios from "axios";
 
 function StationManager() {
+    const BASE_URL = import.meta.env.VITE_BASE_URL;
     const [name, setName] = useState("");
     const [latitude, setLatitude] = useState("");
     const [longitude, setLongitude] = useState("");
@@ -41,7 +42,7 @@ function StationManager() {
             };
 
             await axios.post(
-                "http://localhost:5000/api/chargers",
+                `${BASE_URL}api/chargers`,
                 {
                     name,
                     location: {

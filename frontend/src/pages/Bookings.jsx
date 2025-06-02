@@ -7,13 +7,14 @@ function Bookings() {
     const [error, setError] = useState("");
 
     const fetchBookings = async () => {
+        const BASE_URL = import.meta.env.VITE_BASE_URL;
         setLoading(true);
         setError("");
 
         try {
             const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-            const { data } = await axios.get("http://localhost:5000/api/bookings/mybookings", {
+            const { data } = await axios.get(`${BASE_URL}api/bookings/mybookings`, {
                 headers: {
                     Authorization: `Bearer ${userInfo.token}`,
                 },

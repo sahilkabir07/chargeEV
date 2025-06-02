@@ -3,6 +3,7 @@ import axios from "axios";
 import { toast } from "react-toastify";
 
 function Station() {
+    const BASE_URL = import.meta.env.VITE_BASE_URL;
     const [chargers, setChargers] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState("");
@@ -26,7 +27,7 @@ function Station() {
         try {
             const userInfo = JSON.parse(localStorage.getItem("userInfo"));
 
-            const { data } = await axios.get("http://localhost:5000/api/chargers", {
+            const { data } = await axios.get(`${BASE_URL}api/chargers`, {
                 headers: {
                     Authorization: `Bearer ${userInfo.token}`,
                 },
@@ -65,7 +66,7 @@ function Station() {
                 timeSlot: selectedSlot,
             };
 
-            await axios.post("http://localhost:5000/api/bookings", bookingData, config);
+            await axios.post(`${BASE_URL}api/bookings`, bookingData, config);
 
             toast.success("Booking confirmed!");
             setBookingCharger(null);
