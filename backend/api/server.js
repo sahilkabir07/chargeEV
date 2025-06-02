@@ -12,7 +12,7 @@ const app = express();
 
 app.use(
   cors({
-    origin: "https://charge-ev-eqhf.vercel.app/",
+    origin: "https://charge-ev-eqhf.vercel.app",
     credentials: true,
   })
 );
