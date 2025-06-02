@@ -12,7 +12,7 @@ app.use(cors());
 app.use(express.json());
 
 connectDB();
-
+app.use("/", "hii...");
 app.use("/api/users", userRoutes);
 app.use("/api/chargers", chargerRoutes);
 app.use("/api/bookings", bookingRoutes);
